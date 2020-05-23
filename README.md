@@ -24,15 +24,28 @@ Then copy bundle(.tgz) to application server and run `npm install rest-api-x.x.x
 
 Then start application using `npm start`.
 
+Can automate deployment by writing scrips to copy artifacts to the application server using ssh.
+
 
 ### Risks associated with your application/deployment (answers to the question)
 
-1. Apis are exposed and not secure, anyone can access. So Authentication and authorisation should enabled.
-   Can use OpenID Connect(JWT) and OAuth2 for authentication and authorisation.
-   
-2. Application dependent libraries can have vulnerabilities. So have to check dependency vulnerabilities before deployment.
+1. APIs are exposed but not secured, anyone can access. So Authentication and authorisation should be enabled.
+   Can use OpenID Connect(JWT) and OAuth2.
 
-3. When copy artifact to application server should use ssh in order to securely deploy artifact.
+2. Should use Https instead of http. Ths will enable encrypted and secure communication over network.
+
+3. Can add application logging and monitoring to support application maintenance.
+
+4. Should avoid malicious data injection through APIs to access unauthorised data.
+
+5. Adding resource limitations when possible to prevent Dos attacks.
+
+6. proper configuration of http headers to make secure connections. (Like adding CORS origin whitelists) 
+   
+7. Application dependent libraries can have vulnerabilities. So have to check dependency vulnerabilities before deployment.
+   Can use OWASP related plugin for this.
+
+8. When copy artifact to application server should use ssh in order to securely deploy artifact.
 
 
 
