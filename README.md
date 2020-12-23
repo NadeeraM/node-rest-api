@@ -27,7 +27,7 @@ Then start application using `npm start`.
 Can automate deployment by writing scrips to copy artifacts to the application server using ssh.
 
 
-### Risks associated with your application/deployment (answers to the question)
+### Risks associated with your application/deployment 
 
 1. APIs are exposed but not secured, anyone can access. So Authentication and authorisation should be enabled.
    Can use OpenID Connect(JWT) and OAuth2.
